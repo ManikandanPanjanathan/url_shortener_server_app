@@ -6,7 +6,7 @@ const rateLimiter = require('../middleware/rateLimiter');
 
 /**
  * @swagger
- * /api/shorten:
+ * /api/url/shorten:
  *   post:
  *     summary: Create a shortened URL
  *     tags: [URL Shortener]
@@ -61,11 +61,20 @@ router.post('/shorten', authMiddleware, rateLimiter, urlController.createShortUr
 
 /**
  * @swagger
- * /api/myTestAliasExample:
+ * /api/url/{alias}:
  *   get:
  *     summary: Redirect to original URL
  *     description: Redirects the client to the original long URL associated with the alias
  *     tags: [Redirect]
+ *     parameters:
+ *       - in: path
+ *         name: alias
+ *         required: true
+ *         schema:
+ *           type: string
+ *         example: testing
+ *     security:
+ *       - bearerAuth: []
  *     responses:
  *       302:
  *         description: Successful redirect to the long URL

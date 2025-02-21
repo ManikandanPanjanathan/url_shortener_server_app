@@ -54,7 +54,7 @@ app.use(express.static(path.join(__dirname, "node_modules/swagger-ui-dist")));
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/analytics', analyticsRoutes);
-app.use('/api', urlRoutes);
+app.use('/api/url', urlRoutes);
 
 // // Swagger Documentation
 // swaggerSetup(app);

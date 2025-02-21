@@ -18,8 +18,8 @@ This is a Node.js application, is to design and implement a scalable Custom URL 
 
 ## API Endpoints
 - `POST /api/auth/google-signin`: For Google Signin.
-- `POST /api/shorten`: To create a shorten URL.
-- `GET /api/:alias`: Redirects to the original long URL associated with the alias.
+- `POST /api/url/shorten`: To create a shorten URL.
+- `GET /api/url/:alias`: Redirects to the original long URL associated with the alias.
 - `GET /api/analytics/:alias`: Get analytics data for a specific alias.
 - `GET /api/analytics/topic/:topic`: Get analytics data for a specific topic.
 - `GET /api/analytics/overall`: Get analytics of overall.

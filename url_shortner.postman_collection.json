@@ -49,7 +49,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Yjc2Y2FkODE1YThmYjJmNDg2MGM2MyIsImVtYWlsIjoibWFuaWthbmRhbnBhbmphbmF0aGFuQGdtYWlsLmNvbSIsImlhdCI6MTc0MDA3NDE1NywiZXhwIjoxNzQwMTYwNTU3fQ.tXcYPY-OSDNVYHn7S6S_TKv-tMvytFS-NfNz30GLg-4",
+							"value": "",
 							"type": "string"
 						}
 					]
@@ -58,7 +58,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"longUrl\": \"https://example.com\",\r\n    \"customAlias\": \"AliasExample\",\r\n    \"topic\": \"Testing\"\r\n}",
+					"raw": "{\r\n    \"longUrl\": \"https://example1.com\",\r\n    \"customAlias\": \"AliasExample4\",\r\n    \"topic\": \"Testing2\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -66,7 +66,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/shorten",
+					"raw": "http://localhost:5000/api/url/shorten",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -74,6 +74,7 @@
 					"port": "5000",
 					"path": [
 						"api",
+						"url",
 						"shorten"
 					]
 				}
@@ -89,7 +90,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/AliasExample",
+					"raw": "http://localhost:5000/api/url/AliasExample",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -97,6 +98,7 @@
 					"port": "5000",
 					"path": [
 						"api",
+						"url",
 						"AliasExample"
 					]
 				}
@@ -111,7 +113,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Yjc2Y2FkODE1YThmYjJmNDg2MGM2MyIsImVtYWlsIjoibWFuaWthbmRhbnBhbmphbmF0aGFuQGdtYWlsLmNvbSIsImlhdCI6MTc0MDA3NDE1NywiZXhwIjoxNzQwMTYwNTU3fQ.tXcYPY-OSDNVYHn7S6S_TKv-tMvytFS-NfNz30GLg-4",
+							"value": "",
 							"type": "string"
 						}
 					]
@@ -119,7 +121,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/analytics/myTestAliasExample",
+					"raw": "http://localhost:5000/api/analytics/AliasExample",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -128,7 +130,7 @@
 					"path": [
 						"api",
 						"analytics",
-						"myTestAliasExample"
+						"AliasExample"
 					]
 				}
 			},
@@ -142,7 +144,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Yjc2Y2FkODE1YThmYjJmNDg2MGM2MyIsImVtYWlsIjoibWFuaWthbmRhbnBhbmphbmF0aGFuQGdtYWlsLmNvbSIsImlhdCI6MTc0MDA3NDE1NywiZXhwIjoxNzQwMTYwNTU3fQ.tXcYPY-OSDNVYHn7S6S_TKv-tMvytFS-NfNz30GLg-4",
+							"value": "",
 							"type": "string"
 						}
 					]
@@ -174,7 +176,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Yjc2Y2FkODE1YThmYjJmNDg2MGM2MyIsImVtYWlsIjoibWFuaWthbmRhbnBhbmphbmF0aGFuQGdtYWlsLmNvbSIsImlhdCI6MTc0MDA3NDE1NywiZXhwIjoxNzQwMTYwNTU3fQ.tXcYPY-OSDNVYHn7S6S_TKv-tMvytFS-NfNz30GLg-4",
+							"value": "",
 							"type": "string"
 						}
 					]
