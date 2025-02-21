@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "b5f9c0a5-8470-4550-99a9-7ee9026efb2a",
+		"name": "url_shortner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30911368"
+	},
+	"item": [
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "//Enter your google id_token in token\r\n{\r\n    \"token\": \"\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/auth/google-signin",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"google-signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Short URL API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Yjc2Y2FkODE1YThmYjJmNDg2MGM2MyIsImVtYWlsIjoibWFuaWthbmRhbnBhbmphbmF0aGFuQGdtYWlsLmNvbSIsImlhdCI6MTc0MDA3NDE1NywiZXhwIjoxNzQwMTYwNTU3fQ.tXcYPY-OSDNVYHn7S6S_TKv-tMvytFS-NfNz30GLg-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"longUrl\": \"https://example.com\",\r\n    \"customAlias\": \"AliasExample\",\r\n    \"topic\": \"Testing\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/shorten",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"shorten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Redirect Short URL API",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/AliasExample",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"AliasExample"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get URL Analytics API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Yjc2Y2FkODE1YThmYjJmNDg2MGM2MyIsImVtYWlsIjoibWFuaWthbmRhbnBhbmphbmF0aGFuQGdtYWlsLmNvbSIsImlhdCI6MTc0MDA3NDE1NywiZXhwIjoxNzQwMTYwNTU3fQ.tXcYPY-OSDNVYHn7S6S_TKv-tMvytFS-NfNz30GLg-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/analytics/myTestAliasExample",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analytics",
+						"myTestAliasExample"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Topic-Based Analytics API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Yjc2Y2FkODE1YThmYjJmNDg2MGM2MyIsImVtYWlsIjoibWFuaWthbmRhbnBhbmphbmF0aGFuQGdtYWlsLmNvbSIsImlhdCI6MTc0MDA3NDE1NywiZXhwIjoxNzQwMTYwNTU3fQ.tXcYPY-OSDNVYHn7S6S_TKv-tMvytFS-NfNz30GLg-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/analytics/topic/Testing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analytics",
+						"topic",
+						"Testing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Overall Analytics API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Yjc2Y2FkODE1YThmYjJmNDg2MGM2MyIsImVtYWlsIjoibWFuaWthbmRhbnBhbmphbmF0aGFuQGdtYWlsLmNvbSIsImlhdCI6MTc0MDA3NDE1NywiZXhwIjoxNzQwMTYwNTU3fQ.tXcYPY-OSDNVYHn7S6S_TKv-tMvytFS-NfNz30GLg-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/analytics/overall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analytics",
+						"overall"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
