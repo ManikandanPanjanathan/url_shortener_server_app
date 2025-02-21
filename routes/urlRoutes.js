@@ -32,6 +32,8 @@ const rateLimiter = require('../middleware/rateLimiter');
  *                 type: string
  *                 description: Optional topic or category for the URL
  *                 example: "testing"
+ *     security:
+ *       - bearerAuth: []
  *     responses:
  *       200:
  *         description: Successfully created shortened URL
